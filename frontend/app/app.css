@@ -1,0 +1,34 @@
+/* Inter (variable weight), self-hosted via @fontsource so it ships with the
+   bundle - no external font CDN. Weight axis 100-900 in one file; no
+   per-weight imports. */
+@import "@fontsource-variable/inter";
+
+@import "tailwindcss";
+
+@theme {
+  /* Single source of truth for the app's typefaces. Every component inherits
+     these through Tailwind's font-sans/font-mono utilities and preflight -
+     change the font here, nowhere else. */
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+    monospace;
+
+  /* Brand blue, carried over from AWSC with its Catalyst kit, which references
+     these names (bg-brand, ring-brand, outline-brand, bg-brand-strong) - keep
+     them. brand: links, the default action, focus rings, current state.
+     brand-strong: the heavier CTA and every table header band. Everything else
+     (status colours, badges, borders) stays stock Tailwind zinc/red/green/amber. */
+  --color-brand: #2563eb; /* blue-600 resting, blue-700 on hover - button.tsx brand variant */
+  --color-brand-strong: #1e40af; /* blue-800 - button.tsx brand-strong variant */
+  --color-brand-strong-hover: #1e3a8a; /* blue-900 on hover */
+}
+
+@layer base {
+  html {
+    /* Grayscale antialiasing renders Inter's strokes cleanly on dark and
+       light backgrounds alike; without it macOS bolds text on dark. */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
