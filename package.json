@@ -1,8 +1,0 @@
-{
-  "name": "mgmt6110-problem-sets",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "node scripts/dev.mjs"
-  }
-}
