@@ -37,8 +37,8 @@ server with one health route.
 - Routes: `app/routes.ts`; pages in `app/routes/` render inside the `app-layout.tsx` sidebar shell.
   `/` redirects to `/triage` (loader in `home.tsx`), then the three CRM screens `/triage`,
   `/records`, `/attachments` (see "Problem Set 1: CRM front end" below), `/components` showcase of
-  every UI component (the style reference - open it after any kit change; reachable by URL, not
-  linked from the nav), `*` not-found (its loader returns HTTP 404 and keeps the shell).
+  every UI component (the style reference - open it after any kit change; linked at the bottom of
+  the sidebar, not in the phone's bottom bar), `*` not-found (its loader returns HTTP 404 and keeps the shell).
 - UI kit: `app/components/catalyst/` is Tailwind Plus Catalyst copied verbatim from the AWSC project
   (`/Users/gohkokhong/Documents/GitHub/AWSC/frontend`) - re-sync with `diff`, do not restyle ad hoc.
   Shared pieces: `PageContainer` (page width), `Modal` (the only dialog; size via `width`),

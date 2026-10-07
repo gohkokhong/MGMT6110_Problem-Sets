@@ -1,5 +1,5 @@
 import { useClose } from '@headlessui/react'
-import { ClipboardDocumentListIcon, PaperClipIcon, UserGroupIcon } from '@heroicons/react/20/solid'
+import { ClipboardDocumentListIcon, PaperClipIcon, SwatchIcon, UserGroupIcon } from '@heroicons/react/20/solid'
 import { Outlet, useLocation } from 'react-router'
 import { BottomNav } from '~/components/crm/BottomNav'
 import { SidebarLayout } from '~/components/catalyst/sidebar-layout'
@@ -59,6 +59,13 @@ export default function AppLayout() {
               ))}
             </SidebarSection>
             <SidebarSpacer />
+            {/* The UI kit's style reference, kept apart from the three screens and out of the phone's bottom bar. */}
+            <SidebarSection>
+              <NavItem href="/components" current={pathname === '/components'}>
+                <SwatchIcon data-slot="icon" />
+                <SidebarLabel>Components</SidebarLabel>
+              </NavItem>
+            </SidebarSection>
           </SidebarBody>
 
           <SidebarFooter>
