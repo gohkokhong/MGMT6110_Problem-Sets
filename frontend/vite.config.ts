@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     strictPort: true,
     // Same-origin /api in dev - proxied to the backend, so no CORS. Port 4000
-    // is a placeholder until backend/ picks a stack.
+    // is backend/src/server.ts's default - change both together.
     proxy: {
       "/api": "http://localhost:4000",
     },
