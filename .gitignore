@@ -8,10 +8,11 @@
 .env.*
 !.env.example
 
-# Node (frontend/)
+# Node (frontend/, backend/)
 node_modules/
 frontend/.react-router/
 frontend/build/
+backend/dist/
 
 # Python (in case backend/ picks it)
 __pycache__/
